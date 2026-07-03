@@ -28,22 +28,26 @@ Repository Structure
 This repository contains the core scripts necessary to replicate the data pipeline, the machine learning models, and the Bayesian cognitive models.
 
 Data Pipeline (/data_pipeline)
+
 create_training_data_v4.py: The master script that joins heterogeneous data sources while strictly enforcing chronological temporal ordering to prevent data leakage.
 extract_features.py: Contains the logic and mathematical formulas (including volume-weighting) used to engineer the career and contextual features.
 FEATURE_DOCUMENTATION_V4.md: Detailed documentation explaining the logic behind all 66 engineered features.
 
 Machine Learning Pipeline (/machine_learning)
+
 v16_sota_experiments.py: The core ML script. Contains the Optuna tuning logic, the custom 0.6 Acc + 0.4 F1 objective function, and the parallel weighted ensemble architecture.
 train_ebm.py: Script detailing the training and hyperparameter selection for the Explainable Boosting Machine (EBM).
 v16_best_metrics.json: Output logs proving the final 53.7% prediction accuracy.
 
 Bayesian MPT (/bayesian_mpt)
+
 v8_mpt_advi.stan: The structural probabilistic code defining the 7-node cognitive tree.
 v8_bayesian_advi_eval.py: Executes the Mean-Field ADVI inference and evaluates the model's ELPD.
 fast_map_ablation.py: Executes the node ablation study used to isolate match context from intrinsic athletic traits.
 MPT_FEATURE_MAPPING.md: Documentation explaining how the data features map to the 7 cognitive nodes.
 
 Web Application (/dashboard)
+
 dashboard.py: A 900+ line Streamlit application utilizing Plotly to visualize player cognitive DNA profiles and interactive radar charts.
 
 
