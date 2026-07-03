@@ -24,6 +24,7 @@ Results:
 Outperformed traditional model baselines by 20%, achieving a 53.7% ball-by-ball peak prediction accuracy. Built an interpretable Bayesian model retaining 95.1% of the predictive accuracy of the black-box ensemble.
 
 Repository Structure
+
 This repository contains the core scripts necessary to replicate the data pipeline, the machine learning models, and the Bayesian cognitive models.
 
 Data Pipeline (/data_pipeline)
